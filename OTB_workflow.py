@@ -259,7 +259,7 @@ def train_model(global_parameters, shell=True, proceed=True):
                 training_samples_extracted, "class", model_out, method, str(features))
 
             model_options = ''
-            for key, value in dico[method].iteritems():
+            for key, value in dico[method].items():
                 model_options = model_options + ' -classifier.{}.{} {}'.format(method, key, value)
 
             command = command + model_options
@@ -275,7 +275,7 @@ def train_model(global_parameters, shell=True, proceed=True):
             TrainVectorClassifier.SetParameterStringList("feat", features_API)
             TrainVectorClassifier.SetParameterString("classifier", str(method))
 
-            for key, value in dico[method].iteritems():
+            for key, value in dico[method].items():
                 TrainVectorClassifier.SetParameterString(
                     str("classifier.{}.{}".format(method, key)), str(value))
 
@@ -390,6 +390,7 @@ def compute_mat_conf(global_parameters, show=True, proceed=True):
 
     print(' Confusion matrix computing')
     print(conf_matrix)
+    print(validation_shp)
     ComputeConfusionMatrix = otbApplication.Registry.CreateApplication("ComputeConfusionMatrix")
     ComputeConfusionMatrix.SetParameterString("in", str(img_labeled))
     ComputeConfusionMatrix.SetParameterString("ref", "vector")
@@ -401,7 +402,7 @@ def compute_mat_conf(global_parameters, show=True, proceed=True):
 
     print('Done')
 
-    with open(conf_matrix, 'rb') as csvfile:
+    with open(conf_matrix, 'r') as csvfile:
         reader = csv.reader(csvfile, delimiter=',')
         rows = []
         for row in reader:

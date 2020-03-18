@@ -153,7 +153,7 @@ def masks_preprocess(global_parameters, k_fold_step=None, k_fold_dir=None):
     layers_expand = []
 
     # append the classes names and numbers
-    for mask_name, mask_values in global_parameters["masks"].iteritems():
+    for mask_name, mask_values in global_parameters["masks"].items():
         layers_to_merge.append(op.join(main_dir, 'In_data', 'Masks', mask_values["shp"]))
         layers_classes.append(mask_values["class"])
         layers_expand.append(mask_values["expand"])
