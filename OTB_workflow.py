@@ -86,7 +86,7 @@ def compute_samples_stats(global_parameters, proceed=True):
     '''
     1. Compute the samples stats
     '''
-    print "  Polygon Classes Statistics"
+    print("  Polygon Classes Statistics")
 
     main_dir = global_parameters["user_choices"]["main_dir"]
     raw_img = op.join(main_dir, 'In_data', 'Image', global_parameters["user_choices"]["raw_img"])

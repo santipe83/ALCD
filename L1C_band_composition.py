@@ -321,14 +321,14 @@ def slope_addition(global_parameters, resolution=10):
     geotransform = dataset.GetGeoTransform()
     if geotransform is not None:
         pixel_size = (geotransform[1], geotransform[5])
-        print "     Pixel size :", pixel_size
-        print "     Resolution :", resolution
+        print("     Pixel size :", pixel_size)
+        print("     Resolution :", resolution)
 
     # The slope is resized if the slope resoltion is
     # not the expected one.
     if int(pixel_size[0]) != int(resolution):
 
-        print "     Slope to resize from :", pixel_size[0], "to", resolution
+        print("     Slope to resize from :", pixel_size[0], "to", resolution)
         out_dir = op.join(global_parameters["user_choices"]["main_dir"], 'Intermediate')
         out_slope = op.join(out_dir, op.basename(in_slope).split('.')[0]) + '_resample.' + \
                         op.basename(in_slope).split('.')[1]

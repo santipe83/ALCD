@@ -86,7 +86,8 @@ def create_all_classes_empty_layers(global_parameters, force=False):
 
     # append from the configuration file the masks to create
     layers_to_create = []
-    for mask_name, mask_values in global_parameters["masks"].iteritems():
+    #for mask_name, mask_values in global_parameters["masks"].iteritems():
+    for mask_name, mask_values in global_parameters["masks"].items():
         layers_to_create.append(op.join(main_dir, 'In_data', 'Masks', mask_values["shp"]))
 
     in_tif = op.join(main_dir, 'In_data', 'Image', global_parameters["user_choices"]["raw_img"])
