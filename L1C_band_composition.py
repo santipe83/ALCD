@@ -546,8 +546,8 @@ def create_no_data_tif(global_parameters, out_tif, dilation_radius=10):
     Dilatation.SetParameterInputImage("in", BandMathX.GetParameterOutputImage("out"))
     Dilatation.SetParameterString("out", str(out_tif))
     Dilatation.SetParameterString("filter", "dilate")
-    Dilatation.SetParameterInt("structype.ball.xradius", dilation_radius)
-    Dilatation.SetParameterInt("structype.ball.yradius", dilation_radius)
+    Dilatation.SetParameterInt("xradius", dilation_radius)
+    Dilatation.SetParameterInt("yradius", dilation_radius)
     Dilatation.UpdateParameters()
     Dilatation.ExecuteAndWriteOutput()
 

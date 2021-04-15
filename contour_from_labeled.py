@@ -54,8 +54,8 @@ def single_contour_from_labeled_dilatation(in_tif, out_tif, class_nb, radius=5, 
         Erosion = otbApplication.Registry.CreateApplication("BinaryMorphologicalOperation")
         Erosion.SetParameterInputImage("in", ClassExtract.GetParameterOutputImage("out"))
         Erosion.SetParameterString("filter", "erode")
-        Erosion.SetParameterInt("structype.ball.xradius", 1)
-        Erosion.SetParameterInt("structype.ball.yradius", 1)
+        Erosion.SetParameterInt("xradius", 1)
+        Erosion.SetParameterInt("yradius", 1)
         Erosion.UpdateParameters()
         Erosion.Execute()
 
