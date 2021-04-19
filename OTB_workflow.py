@@ -99,7 +99,7 @@ def compute_samples_stats(global_parameters, proceed=True):
                           global_parameters["general"]["no_data_mask"])
     no_data_mask = no_data_shp[0:-4] + '.tif'
 
-    PolygonClassStatistics = otbApplication.Registry_CreateApplication("PolygonClassStatistics")
+    PolygonClassStatistics = otbApplication.RegistrynCreateApplication("PolygonClassStatistics")
     PolygonClassStatistics.SetParameterString("in", str(raw_img))
     PolygonClassStatistics.SetParameterString("vec", str(training_shp))
     PolygonClassStatistics.SetParameterString("out", str(class_stats))
@@ -168,7 +168,7 @@ def select_samples(global_parameters, strategy="smallest", proceed=True):
     no_data_mask = no_data_shp[0:-4] + '.tif'
 
     print("  Training Samples Selection")
-    SampleSelection = otbApplication.Registry_CreateApplication("SampleSelection")
+    SampleSelection = otbApplication.Registry.CreateApplication("SampleSelection")
     SampleSelection.SetParameterString("in", str(raw_img))
     SampleSelection.SetParameterString("vec", str(training_shp))
     SampleSelection.SetParameterString("mask", str(no_data_mask))
@@ -208,7 +208,7 @@ def extract_samples(global_parameters, proceed=True):
         main_dir, 'Samples', global_parameters["general"]["training_samples_location"])
 
     print("  Training Samples Extraction")
-    SampleExtraction = otbApplication.Registry_CreateApplication("SampleExtraction")
+    SampleExtraction = otbApplication.Registry.CreateApplication("SampleExtraction")
     SampleExtraction.SetParameterString("in", str(raw_img))
     SampleExtraction.SetParameterString("vec", str(training_samples_location))
     SampleExtraction.SetParameterString("outfield", "prefix")
