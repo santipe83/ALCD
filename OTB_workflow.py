@@ -99,7 +99,7 @@ def compute_samples_stats(global_parameters, proceed=True):
                           global_parameters["general"]["no_data_mask"])
     no_data_mask = no_data_shp[0:-4] + '.tif'
 
-    PolygonClassStatistics = otbApplication.RegistrynCreateApplication("PolygonClassStatistics")
+    PolygonClassStatistics = otbApplication.Registry.CreateApplication("PolygonClassStatistics")
     PolygonClassStatistics.SetParameterString("in", str(raw_img))
     PolygonClassStatistics.SetParameterString("vec", str(training_shp))
     PolygonClassStatistics.SetParameterString("out", str(class_stats))
