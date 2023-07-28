@@ -1,0 +1,11 @@
+cycler
+kiwisolver
+matplotlib
+Pillow
+pip
+pyparsing
+python-dateutil
+six
+tornado
+typing_extensions
+wheel
