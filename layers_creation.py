@@ -27,8 +27,7 @@ https://www.gnu.org/licenses/gpl-3.0.fr.html
 
 import os
 import os.path as op
-import ogr
-from osgeo import gdal, osr
+from osgeo import gdal, osr, ogr
 import json
 import otbApplication
 import L1C_band_composition

@@ -3,7 +3,7 @@
 
 import os
 import os.path as op
-import ogr
+from osgeo import ogr
 import numpy as np
 from random import shuffle
 
