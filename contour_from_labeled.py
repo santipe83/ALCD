@@ -30,7 +30,7 @@ import os.path as op
 import json
 import glob
 import otbApplication
-import gdal
+from osgeo import gdal
 from PIL import Image
 import numpy as np
 

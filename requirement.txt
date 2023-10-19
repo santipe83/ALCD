@@ -1,0 +1,6 @@
+ ogr
+ numpy
+ pandas
+ gdal
+ Pillow
+ matplotlib

@@ -26,7 +26,7 @@ https://www.gnu.org/licenses/gpl-3.0.fr.html
 """
 import os
 import os.path as op
-import ogr
+from osgeo import ogr
 from distutils.util import strtobool
 
 
