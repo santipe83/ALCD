@@ -24,7 +24,10 @@ Depuis le répertoire ALCD, lancer les étapes:
 		python all_run_alcd.py -f True -s 0 -l TILE_NAME -d DATE -u True
 	1. Ouvrir et editer les shapefiles :
 		Ouvrir dans QGIS /path/to/data/BDD_v0/TILE_NAME_TILE_ID_DATE/In_data/Masks
-		S'adaider des images dans /path/to/data/BDD_v0/TILE_NAME_TILE_ID_DATE/Intermediate pour remplir les masques de points
+		S'adaider des images dans /path/to/data/BDD_v0/TILE_NAME_TILE_ID_DATE/Intermediate pour remplir les masques de points :
+			- NDWI
+			- RGB
+			- ...
 	2. Premiere itération: 
 		python all_run_alcd.py -f True -s 1
 	3. Voir Résultats dans : 
