@@ -78,36 +78,6 @@
          "expand": "True",
          "shp": "high_clouds.shp"
       },
-      "mineral_turbid_water": {
-         "class": "10",
-         "expand": "True",
-         "shp": "mineral_turbid_water.shp"
-      },
-      "organic_turbid_water": {
-         "class": "11",
-         "expand": "True",
-         "shp": "organic_turbid_water.shp"
-      },
-      "salt_sea": {
-         "class": "12",
-         "expand": "True",
-         "shp": "salt_sea.shp"
-      },
-      "thick_ice": {
-         "class": "13",
-         "expand": "True",
-         "shp": "thick_ice.shp"
-      },
-      "thin_ice": {
-         "class": "14",
-         "expand": "True",
-         "shp": "thin_ice.shp"
-      },
-      "others": {
-         "class": "15",
-         "expand": "True",
-         "shp": "others.shp"
-      },
       "land": {
          "class": "5",
          "expand": "True",
@@ -123,10 +93,40 @@
          "expand": "True",
          "shp": "low_clouds.shp"
       },
+      "mineral_turbid_water": {
+         "class": "10",
+         "expand": "True",
+         "shp": "mineral_turbid_water.shp"
+      },
+      "organic_turbid_water": {
+         "class": "11",
+         "expand": "True",
+         "shp": "organic_turbid_water.shp"
+      },
+      "others": {
+         "class": "15",
+         "expand": "True",
+         "shp": "others.shp"
+      },
+      "salt_sea": {
+         "class": "12",
+         "expand": "True",
+         "shp": "salt_sea.shp"
+      },
       "snow": {
          "class": "7",
          "expand": "True",
          "shp": "snow.shp"
+      },
+      "thick_ice": {
+         "class": "13",
+         "expand": "True",
+         "shp": "thick_ice.shp"
+      },
+      "thin_ice": {
+         "class": "14",
+         "expand": "True",
+         "shp": "thin_ice.shp"
       },
       "water": {
          "class": "6",
@@ -154,12 +154,12 @@
    },
    "user_choices": {
       "clear_date": "",
-      "current_date": "20200124",
-      "location": "T31TCJ",
-      "main_dir": "/data/BDD_CNES/BDD_v0/T31TCJ_20200124",
-      "raw_img": "T31TCJ_bands.tif",
+      "current_date": "20240509",
+      "location": "T31TCH",
+      "main_dir": "/data/BDD_v0/T31TCH_31TCH_20240509",
+      "raw_img": "T31TCH_bands.tif",
       "slope": "",
-      "tile": "31TCJ",
+      "tile": "31TCH",
       "unique_image": "True"
    }
 }
