@@ -1,0 +1,165 @@
+{
+   "classification": {
+      "method": "rf"
+   },
+   "color_tables": {
+      "otb": "otb_table.txt"
+   },
+   "features": {
+      "DTM": "False",
+      "original_bands": [
+         "1",
+         "2",
+         "3",
+         "4",
+         "5",
+         "6",
+         "7",
+         "8",
+         "9",
+         "10",
+         "11",
+         "12"
+      ],
+      "ratios": [],
+      "resolution": "10",
+      "slope": "False",
+      "special_indices": [
+         "NDVI",
+         "NDWI"
+      ],
+      "textures": "False",
+      "time_difference_bands": [
+         "1",
+         "2",
+         "3",
+         "4",
+         "5",
+         "6",
+         "7",
+         "8",
+         "9",
+         "11",
+         "12"
+      ]
+   },
+   "general": {
+      "class_stats": "class_stats.xml",
+      "img_labeled": "labeled_img.tif",
+      "img_labeled_regularized": "labeled_img_regular.tif",
+      "img_stats": "img_stats.xml",
+      "merged_layers": "merged.shp",
+      "no_data_mask": "no_data.shp",
+      "training_samples_extracted": "training_samples_extracted.sqlite",
+      "training_samples_location": "training_samples_location.sqlite",
+      "training_sampling": "smallest",
+      "training_shp": "train_points.shp",
+      "training_shp_extended": "train_points_ext.shp",
+      "validation_shp": "validation_points.shp",
+      "validation_shp_extended": "validation_points_ext.shp"
+   },
+   "local_paths": {
+      "copy_folder": "/home/hagolle/DONNEES/ALCD/",
+      "current_server": "hagolleo@s2calc.cesbio.cnes.fr:/"
+   },
+   "masks": {
+      "background": {
+         "class": "1",
+         "expand": "True",
+         "shp": "background.shp"
+      },
+      "clouds_shadows": {
+         "class": "4",
+         "expand": "True",
+         "shp": "clouds_shadows.shp"
+      },
+      "high_clouds": {
+         "class": "3",
+         "expand": "True",
+         "shp": "high_clouds.shp"
+      },
+      "mineral_turbid_water": {
+         "class": "10",
+         "expand": "True",
+         "shp": "mineral_turbid_water.shp"
+      },
+      "organic_turbid_water": {
+         "class": "11",
+         "expand": "True",
+         "shp": "organic_turbid_water.shp"
+      },
+      "salt_sea": {
+         "class": "12",
+         "expand": "True",
+         "shp": "salt_sea.shp"
+      },
+      "thick_ice": {
+         "class": "13",
+         "expand": "True",
+         "shp": "thick_ice.shp"
+      },
+      "thin_ice": {
+         "class": "14",
+         "expand": "True",
+         "shp": "thin_ice.shp"
+      },
+      "others": {
+         "class": "15",
+         "expand": "True",
+         "shp": "others.shp"
+      },
+      "land": {
+         "class": "5",
+         "expand": "True",
+         "shp": "land.shp"
+      },
+      "land_1pixel": {
+         "class": "5",
+         "expand": "False",
+         "shp": "land_1pixel.shp"
+      },
+      "low_clouds": {
+         "class": "2",
+         "expand": "True",
+         "shp": "low_clouds.shp"
+      },
+      "snow": {
+         "class": "7",
+         "expand": "True",
+         "shp": "snow.shp"
+      },
+      "water": {
+         "class": "6",
+         "expand": "True",
+         "shp": "water.shp"
+      },
+      "water_1pixel": {
+         "class": "6",
+         "expand": "False",
+         "shp": "water_1pixel.shp"
+      }
+   },
+   "postprocessing": {
+      "binary_confusion_matrix": "bin_confusion_matrix.csv",
+      "confidence_map": "False",
+      "confusion_matrix": "confusion_matrix.csv",
+      "model_metrics": "model_metrics.csv"
+   },
+   "training_parameters": {
+      "Kfold": "10",
+      "dilatation_radius": "2",
+      "expansion_distance": "15",
+      "regularization_radius": "1",
+      "training_proportion": "0.9"
+   },
+   "user_choices": {
+      "clear_date": "",
+      "current_date": "20200124",
+      "location": "T31TCJ",
+      "main_dir": "/data/BDD_CNES/BDD_v0/T31TCJ_20200124",
+      "raw_img": "T31TCJ_bands.tif",
+      "slope": "",
+      "tile": "31TCJ",
+      "unique_image": "True"
+   }
+}
