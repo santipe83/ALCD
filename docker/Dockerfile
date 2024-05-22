@@ -5,8 +5,8 @@ FROM ubuntu:20.04 as builder
 ARG DEBIAN_FRONTEND
 ARG OTB_VERSION=7.2.0
 
-RUN apt-get update -y
-RUN DEBIAN_FRONTEND=noninteractive apt-get install --quiet --yes --no-install-recommends \
+RUN apt-get update -y --quiet && \
+    DEBIAN_FRONTEND=noninteractive apt-get install --quiet --yes --no-install-recommends \
         # basic system installs
         build-essential \
         python3 \
@@ -77,8 +77,8 @@ ARG DEBIAN_FRONTEND
 
 WORKDIR /app
 
-RUN apt-get update -y
-RUN apt-get install --quiet --yes --no-install-recommends \
+RUN apt-get update -y --quiet && \
+    DEBIAN_FRONTEND=noninteractive apt-get install --quiet --yes --no-install-recommends \
         python3 \
         python-is-python3 \
         python3-pip \
